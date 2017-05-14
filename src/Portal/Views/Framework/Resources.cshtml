@@ -1,0 +1,108 @@
+﻿<script>
+    /*
+        Stores all the client side resources such as strings, image URLs and constants. The portal will consume this and store it in memory. Add your strings here.
+    */
+    var portalResources = {
+        Keys: {
+            InstrumentationKey: "@Html.Raw(@Microsoft.ApplicationInsights.Extensibility.TelemetryConfiguration.Active.InstrumentationKey)"
+        },
+        Strings: {
+            /*
+                Framework strings
+            */
+            Loading: "@Html.Raw(@Resources.Loading)",
+            FailedToLoadPortal: "@Html.Raw(@Resources.FailedToLoadPortal)",
+            PortalConfigurationNotFound: "@Html.Raw(@Resources.PortalConfigurationNotFound)",
+            InvalidPortalConfiguration: "@Html.Raw(@Resources.InvalidPortalConfiguration)",
+            NavigateBackTo: "@Html.Raw(@Resources.NavigateBackTo)",
+            Ellipsis: "@Html.Raw(@Resources.Ellipsis)",
+            MoreActionsTooltip: "@Html.Raw(@Resources.MoreActionsTooltip)",
+            Yes: "@Html.Raw(@Resources.Yes)",
+            No: "@Html.Raw(@Resources.No)",
+            OK: "@Html.Raw(@Resources.OK)",
+            Cancel: "@Html.Raw(@Resources.Cancel)",
+            Retry: "@Html.Raw(@Resources.RetryCapital)",
+            Next: "@Html.Raw(@Resources.Next)",
+            Back: "@Html.Raw(@Resources.Back)",
+            Add: "@Html.Raw(@Resources.AddCaption)",
+            Delete: "@Html.Raw(@Resources.Delete)",
+            Save: "@Html.Raw(@Resources.Save)",
+            Undo: "@Html.Raw(@Resources.Undo)",
+            NotificationsSummary: "@Html.Raw(@Resources.NotificationsSummary)",
+            TemplateLoadFailureMessage: "@Html.Raw(@Resources.TemplateLoadFailureMessage)",
+            TemplateLoadRetryMessage: "@Html.Raw(@Resources.TemplateLoadRetryMessage)",
+            EmptyListMessage: "@Html.Raw(@Resources.EmptyListMessage)",
+            SignOut: "@Html.Raw(@Resources.Signout)",
+            SignOutToolTipCaption: "@Html.Raw(@Resources.SignOutToolTipCaption)",
+            AccessDeniedMessage: "@Html.Raw(@Resources.AccessDeniedMessage)",
+
+            /*
+                Plugin strings
+            */
+
+            Plugins: {
+                BadInputGenericMessage: "@Html.Raw(Resources.BadInputGenericMessage)",
+                InvalidInput: "@Html.Raw(Resources.InvalidInput)",
+
+                EnvironmentAddNew: {
+                    EnvironmentRegistrationMessage: "@Html.Raw(Resources.EnvironmentRegistrationMessage)",
+                    EnvironmentRegistrationSuccessMessage: "@Html.Raw(Resources.EnvironmentRegistrationSuccessMessage)"
+                },
+
+                HomePage: {
+                    DeleteEnvrionmentMessage: "@Html.Raw(Resources.DeleteEnvrionmentMessage)",
+                    DeletingEnvironmentMessage: "@Html.Raw(Resources.DeletingEnvironmentMessage)",
+                    DeletingMigrationBatchMessage: "@Html.Raw(Resources.DeletingMigrationBatchMessage)",
+                    EnvironmentDeletionConfirmation: "@Html.Raw(Resources.EnvironmentDeletionConfirmation)",
+                    EnvironmentRetrievalFailure: "@Html.Raw(Resources.EnvironmentRetrievalFailure)",
+                    EnvironmentRefreshingMessage: "@Html.Raw(Resources.EnvironmentRefreshingMessage)",
+                    EnvironmentRefreshConfirmation: "@Html.Raw(Resources.EnvironmentRefreshConfirmation)",
+                    EnvironmentRefreshFailure: "@Html.Raw(Resources.EnvironmentRefreshFailure)",
+                    MigrationBatchDeleteMessage: "@Html.Raw(Resources.MigrationBatchDeleteMessage)",
+                    MigrationDeletionConfirmation: "@Html.Raw(Resources.MigrationDeletionConfirmation)",
+                    MigrationBatchDeletionFailure: "@Html.Raw(Resources.MigrationBatchDeletionFailure)"
+                },
+                AddMailboxesView: {
+                    EmptyListCaption: "@Html.Raw(Resources.EmptyListCaption)"
+                },
+                AddMigrationBatch: {
+                    BatchRegistrationSuccessMessage: "@Html.Raw(Resources.BatchRegistrationSuccessMessage)",
+                    PreparingBatchMessage: "@Html.Raw(Resources.PreparingBatchMessage)"
+                }
+            }
+        },
+
+        Images: {
+            /*
+                Framework images
+            */
+
+            ForwardArrow: "/Content/Images/WebPortal/forward.png",
+            BackwardArrow: "/Content/Images/WebPortal/back.png",
+            Tick: "/Content/Images/WebPortal/tick.png",
+            Cross: "/Content/Images/WebPortal/cross.png",
+            Refresh: "/Content/Images/WebPortal/refresh.png",
+            SuccessNotification: "/Content/Images/WebPortal/notification-success.png",
+            InfoNotification: "/Content/Images/WebPortal/notification-info.png",
+            WarningNotification: "/Content/Images/WebPortal/notification-warning.png",
+            ErrorNotification: "/Content/Images/WebPortal/notification-error.png",
+            ProgressNotification: "/Content/Images/WebPortal/notification-progress.gif",
+            Ellipsis: "/Content/Images/WebPortal/ellipsis.png",
+            SortDescending: "/Content/Images/WebPortal/sorted-desc.png",
+            SortAscending: "/Content/Images/WebPortal/sorted-asc.png",
+
+            /*
+                Plugin images
+            */
+
+            Plugins: {
+                Expenses: {
+                    ListViewTabActive: "/Content/Images/Plugins/Expenses/list-view-on.png",
+                    ListViewTabInactive: "/Content/Images/Plugins/Expenses/list-view.png",
+                    ChartViewTabActive: "/Content/Images/Plugins/Expenses/chart-view-on.png",
+                    ChartViewTabInactive: "/Content/Images/Plugins/Expenses/chart-view.png"
+                }
+            }
+        }
+    }
+</script>

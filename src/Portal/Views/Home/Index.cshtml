@@ -1,0 +1,46 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8" />
+    <title>@ViewBag.OrganizationName</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script type="text/javascript">
+        var isAuthenticated = @ViewBag.IsAuthenticated;
+        var userName = '@ViewBag.UserName';
+    </script>
+    @* Generate the framework configuration and resources *@
+    @Html.Partial("~/Views/Framework/Configuration.cshtml", (object)@ViewBag.Configuratrion)
+    @Html.Partial("~/Views/Framework/Resources.cshtml")
+    @* Render the style sheets used in the portal boot up *@
+    @Styles.Render("~/StartupStyles/")
+    @* Render the classes needed to start up the portal *@
+    @Scripts.Render("~/StartupClasses/")
+    <!-- pick up jQuery Globalize from CDN. -->
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.js"></script>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/globalize/0.1.1/cultures/globalize.cultures.js"></script>
+</head>
+<body>
+    <div id="SplashScreen" data-bind="template: { name: SplashScreen.template, data: SplashScreen }">
+    </div>
+    <div id="PortalContent" data-bind="html: portalContent"></div>
+    @foreach (string template in ViewBag.Templates)
+    {
+        Html.RenderPartial(template);
+    }
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $WebPortal.load();
+        });
+    </script>
+    @* Render web portal styles *@
+    @Styles.Render("~/WebPortalStyles/")
+    @if (HttpContext.Current.IsDebuggingEnabled)
+    {
+        @* Render the Web portal framework scripts here to make them show in the browser debugger and ease debugging them *@
+        @Scripts.Render("~/WebPortalClasses/")
+    }
+</body>
+</html>

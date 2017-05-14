@@ -1,0 +1,34 @@
+﻿#MigrationBatchContainer .migrationBatch-content {
+    padding: 15px;
+}
+
+.mailboxes-table {
+    width: 100%;
+}
+
+.migrationBatch-table {
+    width: 100%;
+}
+
+.migrationBatch-title-row {
+    width: 500px;
+    position: relative;
+}
+
+.migrationBatch-links {
+    position: absolute;
+    top: 42%;
+    right: 0px;
+}
+
+    .migrationBatch-links a {
+        margin-right: 5px;
+        margin-left: 5px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+tr.MailboxRow {
+    cursor: pointer;
+    display: table-row;
+}

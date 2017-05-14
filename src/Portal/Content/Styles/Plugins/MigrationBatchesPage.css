@@ -1,0 +1,34 @@
+﻿#MigrationBatchesContainer .migrationBatches-content {
+    padding: 15px;
+}
+
+.migrationBatches-table {
+    width: 100%;
+}
+
+.migrationBatches-title-row {
+    width: 500px;
+    position: relative;
+}
+
+.migrationBatches-links {
+    position: absolute;
+    top: 42%;
+    right: 0px;
+}
+
+    .migrationBatches-links a {
+        margin-right: 5px;
+        margin-left: 5px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+tr.MigrationBatchRow {
+    cursor: pointer;
+    display: table-row;
+}
+
+tr.MigrationBatchActionsRow {
+    display: none;
+}

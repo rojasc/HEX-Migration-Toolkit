@@ -1,0 +1,45 @@
+﻿<style>
+    #profileTable td {
+        padding-bottom: 10px;
+    }
+
+    .inputField {
+        margin-top: 5px;
+        width: 100%;
+        box-sizing: border-box;
+        height: 30px;
+    }
+
+    .note {
+        font-size: 10px;
+        vertical-align: bottom;
+    }
+
+    .leftColumn {
+        width: 50%;
+    }
+
+    .rightColumn {
+        padding-left: 50px;
+    }
+</style>
+<script id="newMigrationBatchProfile-template" type="text/html">
+    <table id="profileTable" style="width: 50%; min-width: 600px;">
+        <tr>
+            <td colspan="2" class="section">
+                <label>@Resources.MigrationBatchInfoSectionCaption</label>
+            </td>
+        </tr>
+        <tr>
+            <td class="leftColumn">
+                @Resources.MigrationBatchNameCaption
+                <br />
+                <input id="BatchName" name="BatchName" type="text" class="inputField" data-bind="textinput: viewModel.Name" data-rule-required="true" />
+            </td>
+            <td class="rightColumn">
+                <label>@Resources.MigrationBatchStartTimeCaption</label><br />
+                <input id="StartTime" name="StartTime" type="text" class="inputField" data-bind="textinput: viewModel.StartTime" data-rule-required="true" />
+            </td>
+        </tr>
+    </table>
+</script>

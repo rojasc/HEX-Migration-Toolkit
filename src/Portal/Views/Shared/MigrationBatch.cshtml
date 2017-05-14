@@ -1,0 +1,54 @@
+﻿<div id="MigrationBatchContainer" class="FullSize">
+    <!-- ko if: viewModel.ShowProgress() -->
+    <div class="Progress FullSize center">
+        <img class="verticalCenteredProgress" src="~/Content/Images/Plugins/ripple.gif" />
+    </div>
+    <!-- /ko -->
+    <!-- ko if: viewModel.IsSet() -->
+    <div class="migrationbatch-content">
+        <table class="migrationBatch-table">
+            <tbody>
+                <tr>
+                    <td width="80%">
+                        <label class="section">@Resources.MigrationBatchTableSection</label>
+                    </td>
+                    <td class="right-aligned" width="20%">
+                        <label class="Link medium-text" data-bind="click: onRefreshClicked">@Resources.Refresh</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="section-divider"></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="mailboxes-table" cellspacing="1" cellpadding="5">
+            <tbody>
+                <tr class="medium-text">
+                    <td>
+                        @Resources.DisplayName
+                    </td>
+                    <td>
+                        @Resources.EmailAddress
+                    </td>
+                    <td>
+                        @Resources.UserPrincipalName
+                    </td>
+                </tr>
+                <!-- ko foreach: viewModel.Mailboxes() -->
+                <tr class="MailboxRow">
+                    <td>
+                        <label data-bind="text: $data.DisplayName"></label>
+                    </td>
+                    <td class="left-aligned">
+                        <label data-bind="text: $data.PrimarySmtpAddress"></label>
+                    </td>
+                    <td>
+                        <label data-bind="text: $data.UserPrincipalName"></label>
+                    </td>
+                </tr>
+                <!-- /ko -->
+            </tbody>
+        </table>
+    </div>
+    <!-- /ko -->
+</div>

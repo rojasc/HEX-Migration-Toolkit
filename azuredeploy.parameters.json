@@ -1,0 +1,69 @@
+﻿{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "appInsightsLocation": {
+      "value": "South Central US"
+    },
+    "applicationId": {
+      "value": ""
+    },
+    "applicationSecret": {
+      "value": ""
+    },
+    "applicationTenantId": {
+      "value": ""
+    },
+    "branch": {
+      "value": "master"
+    },
+    "exchangeOnlinePassword": {
+      "value": ""
+    },
+    "exchangeOnlineUsername": {
+      "value": ""
+    },
+    "hostingPlanName": {
+      "value": ""
+    },
+    "keyVaultApplicationId": {
+      "value": ""
+    },
+    "keyVaultApplicationSecret": {
+      "value": ""
+    },
+    "keyVaultName": {
+      "value": ""
+    },
+    "keyVaultSkuName": {
+      "value": "Standard"
+    },
+    "keyVaultTenantId": {
+      "value": ""
+    },
+    "partnerCenterApplicationId": {
+      "value": ""
+    },
+    "partnerCenterApplicationSecret": {
+      "value": ""
+    },
+    "partnerCenterApplicationTenantId": {
+      "value": ""
+    },
+    "repoUrl": {
+      "value": "https://github.com/Microsoft/HEX-Migration-Toolkit"
+    },
+    "serviceBusNamespaceName": {
+      "value": ""
+    },
+    "siteName": {
+      "value": ""
+    },
+    "skuName": {
+      "value": "B1"
+    },
+    "skuCapacity": {
+      "value": 1
+    }
+  }
+}

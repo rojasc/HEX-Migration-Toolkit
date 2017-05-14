@@ -1,0 +1,65 @@
+﻿<div id="EnvironmentsContainer" class="FullSize">
+    <!-- ko if: viewModel.ShowProgress() -->
+    <div class="Progress FullSize center">
+        <img class="verticalCenteredProgress" src="~/Content/Images/Plugins/ripple.gif" />
+    </div>
+    <!-- /ko -->
+    <!-- ko if: viewModel.IsSet() -->
+    <div class="environments-content">
+        <table class="environments-table">
+            <tbody>
+                <tr>
+                    <td width="80%">
+                        <label class="section">@Resources.EnvironmentsTableSection</label>
+                    </td>
+                    <td class="right-aligned" width="20%">
+                        <label class="Link medium-text" data-bind="click: onAddEnvrionmentClicked">@Resources.AddNewEnvironment</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="section-divider"></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="environments-table" cellspacing="1" cellpadding="5">
+            <tbody>
+                <tr class="medium-text">
+                    <td>
+                        @Resources.Name
+                    </td>
+                    <td>
+                        @Resources.Endpoint
+                    </td>
+                    <td>
+                        @Resources.Username
+                    </td>
+                    <td />
+                    <td />
+                </tr>
+                <!-- ko foreach: viewModel.Environments() -->
+                <tr class="EnvironmentRow">
+                    <td>
+                        <label data-bind="text: $data.Name"></label>
+                    </td>
+                    <td class="left-aligned">
+                        <label data-bind="text: $data.Endpoint"></label>
+                    </td>
+                    <td>
+                        <label data-bind="text: $data.Username"></label>
+                    </td>
+                    <td>
+                        <label class="Link medium-text" data-bind="click: $root.onBatchesClicked">Batches</label>
+                    </td>
+                    <td>
+                        <label class="Link medium-text" data-bind="click: $root.onRefreshClicked">Refresh</label>
+                    </td>
+                    <td>
+                        <label class="Link medium-text" data-bind="click: $root.onDeleteClicked">Delete</label>
+                    </td>
+                </tr>
+                <!-- /ko -->
+            </tbody>
+        </table>
+    </div>
+    <!-- /ko -->
+</div>

@@ -1,0 +1,45 @@
+﻿<script id="addMailboxes-template" type="text/html">
+    <!-- ko stopBinding: true -->
+    <div id="MailboxesList"></div>
+    <!-- /ko -->
+    <div class="add-plan-header">
+        <label data-bind="click: onAddMailboxClicked" class="Link medium-text">@Resources.AddMailboxes</label>
+    </div>
+</script>
+
+<script id="mailboxEntry-template" type="text/html">
+    <table cellspacing="5">
+        <tr>
+            <td colspan="2" width="70%">
+                <label class="offer-title" data-bind="text: row.mailbox.DisplayName"></label>
+            </td>
+            <td class="right-padded fit-to-content" width="10%">
+                <label class="monthly-fee" data-bind="text: row.mailbox.SamAccountName"></label>
+            </td>
+            <td align="center" width="10%">
+                <label class="monthly-fee" data-bind="text: row.mailbox.UserPrincipalName"></label>
+            </td>
+            <td class="right-aligned" width="10%">
+                <label class="Link remove-link" data-bind="click: function () { $parents[3].remove(row); $('#MailboxesList').height($('#MailboxesList table').height());}">@Resources.RemoveFromBatch</label>
+            </td>
+        </tr>
+    </table>
+</script>
+
+<script id="emptyMailboxesErrorMessage-template" type="text/html">
+    <div class="empty-mailboxes-error-message">
+        <label>@Resources.EmptyMailboxesErrorMessage</label>
+    </div>
+</script>
+
+<script id="mailboxPicker-template" type="text/html">
+    <div id="MailboxSelectionWizard">
+        <label>@Resources.SelectMailboxCaption</label>
+        <!-- ko stopBinding: true -->
+        <div id="mailboxList" class="MailboxList"></div>
+        <!-- /ko -->
+        <div class="OfferErrorMessage">
+            <label data-bind="text: errorMessage" class="MetroMediumLight error"></label>
+        </div>
+    </div>
+</script>

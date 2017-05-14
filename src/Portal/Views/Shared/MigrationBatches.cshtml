@@ -1,0 +1,62 @@
+﻿<div id="MigrationBatchesContainer" class="FullSize">
+    <!-- ko if: viewModel.ShowProgress() -->
+    <div class="Progress FullSize center">
+        <img class="verticalCenteredProgress" src="~/Content/Images/Plugins/ripple.gif" />
+    </div>
+    <!-- /ko -->
+    <!-- ko if: viewModel.IsSet() -->
+    <div class="migrationBatches-content">
+        <table class="migrationBatches-table">
+            <tbody>
+                <tr>
+                    <td width="80%">
+                        <label class="section">@Resources.MigrationBatchesTableSection</label>
+                    </td>
+                    <td class="right-aligned" width="20%">
+                        <label class="Link medium-text" data-bind="click: onAddClicked">@Resources.AddMigrationBatch</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="section-divider"></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="migrationBatches-table" cellspacing="1" cellpadding="5">
+            <tbody>
+                <tr class="medium-text">
+                    <td>
+                        @Resources.Name
+                    </td>
+                    <td>
+                        @Resources.StartTime
+                    </td>
+                    <td>
+                        @Resources.TargetDeliverDomain
+                    </td>
+                    <td />
+                    <td />
+                </tr>
+                <!-- ko foreach: viewModel.MigrationBatches() -->
+                <tr class="MigrationBatchRow">
+                    <td>
+                        <label data-bind="text: $data.Name"></label>
+                    </td>
+                    <td class="left-aligned">
+                        <label data-bind="text: $data.StartTime"></label>
+                    </td>
+                    <td>
+                        <label data-bind="text: $data.TargetDeliveryDomain"></label>
+                    </td>
+                    <td>
+                        <label class="Link medium-text" data-bind="click: $root.onViewClicked">@Resources.View</label>
+                    </td>
+                    <td>
+                        <label class="Link medium-text" data-bind="click: $root.onDeleteClicked">@Resources.Delete</label>
+                    </td>
+                </tr>
+                <!-- /ko -->
+            </tbody>
+        </table>
+    </div>
+    <!-- /ko -->
+</div>

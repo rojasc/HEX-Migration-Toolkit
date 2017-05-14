@@ -1,0 +1,498 @@
+﻿{
+  "Dependencies": {
+    "DefaultAssetVersion": "Debug",
+    "Assets": [
+      {
+        "Version": "Debug",
+        "JavaScript": [
+          "~/Scripts/WebPortal/Dependencies/app.insights.js",
+          "~/Scripts/WebPortal/Dependencies/jquery-1.11.2.js",
+          "~/Scripts/WebPortal/Dependencies/jquery-ui.js",
+          "~/Scripts/WebPortal/Dependencies/knockout-3.4.1.debug.js",
+          "~/Scripts/WebPortal/Dependencies/jquery.validate.js"
+        ],
+        "Css": [
+        ]
+      },
+      {
+        "Version": "Release",
+        "JavaScript": [
+          "~/Scripts/WebPortal/Dependencies/app.insights.min.js",
+          "~/Scripts/WebPortal/Dependencies/jquery-1.11.2.min.js",
+          "~/Scripts/WebPortal/Dependencies/jquery-ui.min.js",
+          "~/Scripts/WebPortal/Dependencies/knockout-3.4.1.js",
+          "~/Scripts/WebPortal/Dependencies/jquery.validate.min.js"
+        ],
+        "Css": [
+        ]
+      }
+    ]
+  },
+
+  "Core": {
+    "Startup": {
+      "DefaultAssetVersion": "Standard",
+      "Assets": [
+        {
+          "Version": "Standard",
+          "JavaScript": [
+            "~/Scripts/WebPortal/Core/WebPortal.js",
+            "~/Scripts/WebPortal/Infrastructure/Helpers.js",
+            "~/Scripts/WebPortal/Infrastructure/KnockOutExtensions.js",
+            "~/Scripts/WebPortal/Infrastructure/Settings.js",
+            "~/Scripts/WebPortal/Infrastructure/Diagnostics.js",
+            "~/Scripts/WebPortal/Core/Shell.js",
+            "~/Scripts/WebPortal/Core/SplashScreen.js",
+            "~/Scripts/WebPortal/Core/EventSystem.js",
+            "~/Scripts/WebPortal/Utilities/RetryableServerCall.js",
+            "~/Scripts/WebPortal/Utilities/Animation.js"
+          ],
+          "Css": [
+            "~/Content/Styles/WebPortal/WebPortalStyles.css",
+            "~/Content/Styles/WebPortal/StandardSplashScreen.css"
+          ],
+          "Templates": [
+            "StandardSplashScreen"
+          ]
+        }
+      ]
+    },
+    "NonStartup": {
+      "DefaultAssetVersion": "Standard",
+      "Assets": [
+        {
+          "Version": "Standard",
+          "JavaScript": [
+            "~/Scripts/WebPortal/Core/SessionManager.js",
+            "~/Scripts/WebPortal/Core/Presenter.js",
+            "~/Scripts/WebPortal/Core/TemplatePresenter.js",
+            "~/Scripts/WebPortal/Core/Widget.js",
+            "~/Scripts/WebPortal/Core/WidgetPresenter.js",
+            "~/Scripts/WebPortal/Core/View.js",
+            "~/Scripts/WebPortal/Core/ContentPanel.js",
+            "~/Scripts/WebPortal/Core/Journey.js",
+            "~/Scripts/WebPortal/Core/UrlManager.js",
+            "~/Scripts/WebPortal/Core/ServerCallManager.js",
+            "~/Scripts/WebPortal/Core/PortalService.js",
+            "~/Scripts/WebPortal/Utilities/AsyncOperationSerializer.js",
+            "~/Scripts/WebPortal/Utilities/Throttler.js",
+            "~/Scripts/WebPortal/Utilities/Toggler.js"
+          ],
+          "Css": [
+          ]
+        }
+      ]
+    }
+  },
+
+  "Services": [
+    {
+      "Name": "Commons",
+      "DefaultAssetVersion": "1.0",
+      "Assets": [
+        {
+          "Version": "1.0",
+          "JavaScript": [
+            "~/Scripts/WebPortal/Services/Button.js"
+          ],
+          "Css": [
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Actions",
+      "DefaultAssetVersion": "1.0",
+      "Assets": [
+        {
+          "Version": "1.0",
+          "JavaScript": [
+            "~/Scripts/WebPortal/Services/Actions/Action.js",
+            "~/Scripts/WebPortal/Services/Actions/ActionsManager.js",
+            "~/Scripts/WebPortal/Services/Actions/ActionsService.js"
+          ],
+          "Css": [
+            "~/Content/Styles/WebPortal/Actions.css"
+          ],
+          "Templates": [
+            "~/Views/Services/Actions.cshtml"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Dialog",
+      "DefaultAssetVersion": "1.0",
+      "Assets": [
+        {
+          "Version": "1.0",
+          "JavaScript": [
+            "~/Scripts/WebPortal/Services/Dialog/Dialog.js"
+          ],
+          "Css": [
+            "~/Content/Styles/WebPortal/Dialog.css"
+          ],
+          "Templates": [
+            "~/Views/Services/Dialog.cshtml"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "HeaderBar",
+      "DefaultAssetVersion": "1.0",
+      "Assets": [
+        {
+          "Version": "1.0",
+          "JavaScript": [
+            "~/Scripts/WebPortal/Services/HeaderBar/HeaderBar.js",
+            "~/Scripts/WebPortal/Services/HeaderBar/HeaderBarSection.js",
+            "~/Scripts/WebPortal/Services/HeaderBar/TitleSection.js",
+            "~/Scripts/WebPortal/Services/HeaderBar/ActionsSection.js",
+            "~/Scripts/WebPortal/Services/HeaderBar/LinksSection.js",
+            "~/Scripts/WebPortal/Services/HeaderBar/NotificationsSection.js",
+            "~/Scripts/WebPortal/Services/HeaderBar/UserSection.js"
+          ],
+          "Css": [
+            "~/Content/Styles/WebPortal/HeaderBar.css"
+          ],
+          "Templates": [
+            "~/Views/Services/HeaderBar.cshtml"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Notifications",
+      "DefaultAssetVersion": "1.0",
+      "Assets": [
+        {
+          "Version": "1.0",
+          "JavaScript": [
+            "~/Scripts/WebPortal/Services/Notifications/Notification.js",
+            "~/Scripts/WebPortal/Services/Notifications/NotificationsManager.js"
+          ],
+          "Css": [
+            "~/Content/Styles/WebPortal/Notifications.css"
+          ],
+          "Templates": [
+            "~/Views/Services/Notifications.cshtml"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Login",
+      "DefaultAssetVersion": "1.0",
+      "Assets": [
+        {
+          "Version": "1.0",
+          "JavaScript": [
+            "~/Scripts/WebPortal/Services/Login/Login.js"
+          ],
+          "Css": [
+            "~/Content/Styles/WebPortal/Login.css"
+          ],
+          "Templates": [
+            "~/Views/Services/Login.cshtml"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "PrimaryNavigation",
+      "DefaultAssetVersion": "1.0",
+      "Assets": [
+        {
+          "Version": "1.0",
+          "JavaScript": [
+            "~/Scripts/WebPortal/Services/PrimaryNavigation/PrimaryNavigation.js"
+          ],
+          "Css": [
+            "~/Content/Styles/WebPortal/PrimaryNavigation.css"
+          ],
+          "Templates": [
+            "~/Views/Services/PrimaryNavigation.cshtml"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "UserMenu",
+      "DefaultAssetVersion": "1.0",
+      "Assets": [
+        {
+          "Version": "1.0",
+          "JavaScript": [
+            "~/Scripts/WebPortal/Services/UserMenu/UserMenuService.js"
+          ],
+          "Css": [
+          ]
+        }
+      ]
+    }
+  ],
+
+  "Views": [
+    {
+      "Name": "List",
+      "DefaultAssetVersion": "1.0",
+      "Assets": [
+        {
+          "Version": "1.0",
+          "JavaScript": [
+            "~/Scripts/WebPortal/Views/List/List.js",
+            "~/Scripts/WebPortal/Views/List/Column.js",
+            "~/Scripts/WebPortal/Views/List/ListRenderer.js",
+            "~/Scripts/WebPortal/Views/List/IListEventListener.js",
+            "~/Scripts/WebPortal/Views/List/TablePageRenderer.js",
+            "~/Scripts/WebPortal/Views/List/InfiniteScrollingRenderer.js"
+          ],
+          "Css": [
+            "~/Content/Styles/WebPortal/List.css"
+          ],
+          "Templates": [
+            "~/Views/Controls/List.cshtml"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "AddMailboxes",
+      "DefaultAssetVersion": "1.0",
+      "Assets": [
+        {
+          "Version": "1.0",
+          "JavaScript": [
+            "~/Scripts/Plugins/Views/AddMailboxesView.js"
+          ],
+          "Css": [
+          ],
+          "Templates": [
+            "~/Views/Controls/AddMailboxes.cshtml"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "NewEnvironmentProfile",
+      "DefaultAssetVersion": "1.0",
+      "Assets": [
+        {
+          "Version": "1.0",
+          "JavaScript": [
+            "~/Scripts/Plugins/Views/NewEnvironmentProfileView.js"
+          ],
+          "Css": [
+          ],
+          "Templates": [
+            "~/Views/Controls/NewEnvironmentProfile.cshtml"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "NewMigrationBatchProfile",
+      "DefaultAssetVersion": "1.0",
+      "Assets": [
+        {
+          "Version": "1.0",
+          "JavaScript": [
+            "~/Scripts/Plugins/Views/NewMigrationBatchProfileView.js"
+          ],
+          "Css": [
+          ],
+          "Templates": [
+            "~/Views/Controls/NewMigrationBatchProfile.cshtml"
+          ]
+        }
+      ]
+    }
+  ],
+  "Plugins": {
+    "Defaults": {
+      "DisplayName": "Unknown",
+      "Tile": "icon fa fa-question",
+      "Color": "#3D3C3A",
+      "AlternateColor": "#4D4C4A"
+    },
+    "Commons": {
+      "Name": "Commons",
+      "DefaultAssetVersion": "1.0",
+      "Assets": [
+        {
+          "Version": "1.0",
+          "JavaScript": [
+            "~/Scripts/Plugins/CommerceOperationType.js",
+            "~/Scripts/Plugins/ErrorCode.js"
+          ],
+          "Css": [
+            "~/Content/Styles/Plugins/Common.css"
+          ]
+        }
+      ]
+    },
+    "Plugins": [
+      {
+        "Name": "Home",
+        "DisplayName": "Home",
+        "Tile": "icon fa fa-home",
+        "DefaultFeature": "Home",
+        "Features": [
+          {
+            "Name": "Home",
+            "DefaultAssetVersion": "1.0",
+            "Assets": [
+              {
+                "Version": "1.0",
+                "JavaScript": [
+                  "~/Scripts/Plugins/HomePagePresenter.js"
+                ],
+                "Css": [
+                  "~/Content/Styles/Plugins/HomePage.css"
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "EnvironmentAddNew",
+            "DefaultAssetVersion": "1.0",
+            "Assets": [
+              {
+                "Version": "1.0",
+                "JavaScript": [
+                  "~/Scripts/Plugins/EnvironmentAddNewPagePresenter.js"
+                ],
+                "Css": [
+                  "~/Content/Styles/Plugins/EnvironmentAddNewPage.css"
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "MigrationBatch",
+            "DefaultAssetVersion": "1.0",
+            "Assets": [
+              {
+                "Version": "1.0",
+                "JavaScript": [
+                  "~/Scripts/Plugins/MigrationBatchPagePresenter.js"
+                ],
+                "Css": [
+                  "~/Content/Styles/Plugins/MigrationBatchPage.css"
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "MigrationBatches",
+            "DefaultAssetVersion": "1.0",
+            "Assets": [
+              {
+                "Version": "1.0",
+                "JavaScript": [
+                  "~/Scripts/Plugins/MigrationBatchesPagePresenter.js"
+                ],
+                "Css": [
+                  "~/Content/Styles/Plugins/MigrationBatchesPage.css"
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "MigrationBatchAddNew",
+            "DefaultAssetVersion": "1.0",
+            "Assets": [
+              {
+                "Version": "1.0",
+                "JavaScript": [
+                  "~/Scripts/Plugins/MigrationBatchAddNewPagePresenter.js"
+                ],
+                "Css": [
+                  "~/Content/Styles/Plugins/MigrationBatchAddNewPage.css"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+
+    "DefaultPlugin": "Home"
+  },
+
+  "Configuration": {
+    /* The default animation duration used in the portal. */
+    "DefaultAnimationDuration": 300,
+
+    /* The default throttling duration in milleseconds used by the throttledChange KO binding. */
+    "DefaultThrottlingDuration": 450,
+
+    /* The minimum supported resolution. */
+    "MinimumResolution": {
+      "Width": 1024,
+      "Height": 600
+    },
+
+    "HeaderBar": {
+      "Height": 41
+    },
+
+    /* Primary navigation configuration. */
+    "PrimaryNavigation": {
+      "Template": "tileBasedPrimaryNavigation-template"
+    },
+
+    /* Action bar configuration. */
+    "ActionBar": {
+      "MenuBackgroundColor": "#333333",
+      "MenuHoverBackgroundColor": "#333333",
+      "MenuTextColor": "white",
+      "MenuHoverTextColor": "#007acc",
+
+      /* The maximum number of actions to display in the actions bar before adding the other actions to the extra (...) action as children. */
+      "MaxActions": 5
+    },
+
+    /* Control panel settings. */
+    "ControlPanel": {
+      "AnimationDuration": 650,
+
+      /* The width of the fully expanded control panel. */
+      "FullWidth": 191
+    },
+
+    "Notifications": {
+      "Template": "notificationPanel-template"
+    },
+
+    /* Server call timeout configuration. */
+    "Timeout": {
+      "Default": 60000,
+      "Min": 2000,
+      "Max": 180000
+    },
+
+    /* Diagnostics configuration. */
+    "Diagnostics": {
+      "Level": {
+        "Info": "INFO",
+        "Warning": "WARNING",
+        "Error": "ERROR"
+      }
+    },
+
+    /* Server Web API urls. Add your Web API urls here. */
+    "WebApi": {
+      "WebPortalContent": "/Template/FrameworkFragments",
+      "Expenses": {
+        "GetExpenses": "/api/expenses"
+      }
+    },
+
+    "List": {
+      "PageSize": 20,
+      "Sensitivity": 0.85
+    }
+  }
+}

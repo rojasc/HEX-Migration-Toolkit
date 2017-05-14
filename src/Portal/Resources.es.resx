@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccessDeniedMessage" xml:space="preserve">
+    <value>No tienes los derechos necesarios para acceder a esta zona</value>
+  </data>
+  <data name="AddCapital" xml:space="preserve">
+    <value>AÑADIR</value>
+  </data>
+  <data name="AddCaption" xml:space="preserve">
+    <value>Añadir</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Atrás</value>
+  </data>
+  <data name="BadInputGenericMessage" xml:space="preserve">
+    <value>Había un entrada ha producido un error. Por favor, compruebe las entradas e inténtelo de nuevo.</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="ClearAll" xml:space="preserve">
+    <value>Borrar todo</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="DownstreamErrorPrefix" xml:space="preserve">
+    <value>Somos capaces de procesar su solicitud en este momento. Por favor Inténtalo más tarde o póngase en contacto con soporte.</value>
+  </data>
+  <data name="Ellipsis" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="EmptyListCaption" xml:space="preserve">
+    <value>Por favor añadir un buzón de correo</value>
+  </data>
+  <data name="EmptyListMessage" xml:space="preserve">
+    <value>No encuentra las entidades</value>
+  </data>
+  <data name="FailedToLoadPortal" xml:space="preserve">
+    <value>No se pudo obtener contenido de portal</value>
+  </data>
+  <data name="First" xml:space="preserve">
+    <value>Primero</value>
+  </data>
+  <data name="FriendlyName" xml:space="preserve">
+    <value>Nombre descriptivo</value>
+  </data>
+  <data name="Identifier" xml:space="preserve">
+    <value>Identificador de</value>
+  </data>
+  <data name="Incidents" xml:space="preserve">
+    <value>Incidentes</value>
+  </data>
+  <data name="InvalidAddress" xml:space="preserve">
+    <value>Por favor, especificar una dirección válida</value>
+  </data>
+  <data name="InvalidInput" xml:space="preserve">
+    <value>Hubo un problema en uno de los campos que escribiste:</value>
+  </data>
+  <data name="InvalidInputErrorPrefix" xml:space="preserve">
+    <value>Corrija la entrada no válida:</value>
+  </data>
+  <data name="InvalidInputInFormCaption" xml:space="preserve">
+    <value>Uno o más campos no son válidos. Por favor corregirlos y luego enviar.</value>
+  </data>
+  <data name="InvalidPortalConfiguration" xml:space="preserve">
+    <value>Configuración de portal parece ser válido</value>
+  </data>
+  <data name="Last" xml:space="preserve">
+    <value>Pasado</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Carga</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Inicio de sesión</value>
+  </data>
+  <data name="MicrosoftId" xml:space="preserve">
+    <value>ID de Microsoft</value>
+  </data>
+  <data name="MoreActionsTooltip" xml:space="preserve">
+    <value>Más acciones...</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="NavigateBackTo" xml:space="preserve">
+    <value>Volver a:</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Siguiente</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="NotificationSectionTooltip" xml:space="preserve">
+    <value>Notificaciones activadas</value>
+  </data>
+  <data name="NotificationsSummary" xml:space="preserve">
+    <value>nuevas notificaciones</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>Vale</value>
+  </data>
+  <data name="PasswordLabel" xml:space="preserve">
+    <value>Contraseña:</value>
+  </data>
+  <data name="PhoneHeaderCaption" xml:space="preserve">
+    <value>Número de teléfono</value>
+  </data>
+  <data name="PhoneHeaderRequired" xml:space="preserve">
+    <value>Número de teléfono es requerido.</value>
+  </data>
+  <data name="PortalConfigurationNotFound" xml:space="preserve">
+    <value>No se encontró la configuración del portal</value>
+  </data>
+  <data name="ProcessingOrder" xml:space="preserve">
+    <value>Procesamiento de la orden...</value>
+  </data>
+  <data name="ProductTitle" xml:space="preserve">
+    <value>Kit de herramientas de migración hexagonal</value>
+  </data>
+  <data name="RedisCacheConnectionException" xml:space="preserve">
+    <value>No se pudo conectar a la instancia especificada.</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Acuérdate de mí</value>
+  </data>
+  <data name="Retry" xml:space="preserve">
+    <value>Vuelva a intentarlo</value>
+  </data>
+  <data name="RetryCapital" xml:space="preserve">
+    <value>VUELVA A INTENTARLO</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="Signout" xml:space="preserve">
+    <value>Cerrar sesión</value>
+  </data>
+  <data name="SignOutToolTipCaption" xml:space="preserve">
+    <value>Salir de la aplicación</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="TemplateLoadFailureMessage" xml:space="preserve">
+    <value>No se pudo obtener el contenido de la función</value>
+  </data>
+  <data name="TemplateLoadRetryMessage" xml:space="preserve">
+    <value>Obtener contenido de característica</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>Deshacer</value>
+  </data>
+  <data name="UsernameLabel" xml:space="preserve">
+    <value>Nombre de usuario:</value>
+  </data>
+  <data name="UserUnauthorizedException" xml:space="preserve">
+    <value>El usuario autenticado no está autorizado para realizar esta operación.</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Sí</value>
+  </data>
+  <data name="OrganizationName" xml:space="preserve">
+    <value>Microsoft</value>
+  </data>
+  <data name="AddNewEnvironment" xml:space="preserve">
+    <value>Añadir nuevo entorno</value>
+  </data>
+  <data name="Endpoint" xml:space="preserve">
+    <value>Punto final</value>
+  </data>
+  <data name="EnvironmentRetrievalFailure" xml:space="preserve">
+    <value>No se pudo recuperar ambientes...</value>
+  </data>
+  <data name="EnvironmentsTableSection" xml:space="preserve">
+    <value>Entornos de</value>
+  </data>
+  <data name="EnvironmentEndpointCaption" xml:space="preserve">
+    <value>Punto final</value>
+  </data>
+  <data name="EnvironmentInfoSectionCaption" xml:space="preserve">
+    <value>Información sobre el entorno</value>
+  </data>
+  <data name="EnvironmentNameCaption" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="EnvironmentPasswordCaption" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+  <data name="EnvironmentUsernameCaption" xml:space="preserve">
+    <value>Nombre de usuario</value>
+  </data>
+  <data name="EnvironmentRegistrationMessage" xml:space="preserve">
+    <value>Registro de ambiente...</value>
+  </data>
+  <data name="EnvironmentRegistrationSuccessMessage" xml:space="preserve">
+    <value>Medio ambiente ha creado correctamente</value>
+  </data>
+  <data name="DeleteEnvrionmentMessage" xml:space="preserve">
+    <value>¿Está seguro que desea eliminar este entorno?</value>
+  </data>
+  <data name="DeletingEnvironmentMessage" xml:space="preserve">
+    <value>Eliminando el medio ambiente...</value>
+  </data>
+  <data name="EnvironmentDeletionFailure" xml:space="preserve">
+    <value>No se puede eliminar el entorno...</value>
+  </data>
+  <data name="EnvironmentDeletionConfirmation" xml:space="preserve">
+    <value>El medio ambiente y buzones asociados se han eliminado</value>
+  </data>
+  <data name="MigrationBatchInfoSectionCaption" xml:space="preserve">
+    <value>Información de lote</value>
+  </data>
+  <data name="MigrationBatchNameCaption" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="MigrationBatchStartTimeCaption" xml:space="preserve">
+    <value>Hora de inicio</value>
+  </data>
+  <data name="EnvironmentAdminEmail" xml:space="preserve">
+    <value>Dirección de correo electrónico de la administración</value>
+  </data>
+  <data name="MigrationBatchesTableSection" xml:space="preserve">
+    <value>Lotes de migración</value>
+  </data>
+  <data name="AddMailboxes" xml:space="preserve">
+    <value>Agregar buzones</value>
+  </data>
+  <data name="AddMigrationBatch" xml:space="preserve">
+    <value>Añadir nuevo lote de migración</value>
+  </data>
+  <data name="EmptyMailboxesErrorMessage" xml:space="preserve">
+    <value>Debe seleccionar al menos un buzón</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Quitar</value>
+  </data>
+  <data name="SelectMailboxCaption" xml:space="preserve">
+    <value>Por favor, seleccione un buzón</value>
+  </data>
+  <data name="RemoveFromBatch" xml:space="preserve">
+    <value>Eliminar del lote de</value>
+  </data>
+  <data name="PreparingBatchMessage" xml:space="preserve">
+    <value>Preparar el lote de migración...</value>
+  </data>
+  <data name="EnvironmentRefreshConfirmation" xml:space="preserve">
+    <value>Medio ambiente fue actualizado con éxito.</value>
+  </data>
+  <data name="EnvironmentRefreshFailure" xml:space="preserve">
+    <value>No podría refrescar el medio ambiente...</value>
+  </data>
+  <data name="EnvironmentRefreshingMessage" xml:space="preserve">
+    <value>Medio ambiente refrescante</value>
+  </data>
+  <data name="BatchRegistrationSuccessMessage" xml:space="preserve">
+    <value>Creado por lotes</value>
+  </data>
+  <data name="StartTime" xml:space="preserve">
+    <value>Hora de inicio</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Nombre de usuario</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Nombre para mostrar</value>
+  </data>
+  <data name="EmailAddress" xml:space="preserve">
+    <value>Dirección de correo electrónico</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Actualización</value>
+  </data>
+  <data name="MigrationBatchTableSection" xml:space="preserve">
+    <value>Información de lote de migración</value>
+  </data>
+  <data name="EntityNotFoundException" xml:space="preserve">
+    <value>No se puede localizar la entidad especificada o el usuario no está autorizado para realizar esta operación.</value>
+  </data>
+  <data name="DeletingMigrationBatchMessage" xml:space="preserve">
+    <value>Eliminando el proceso de migración...</value>
+  </data>
+  <data name="MigrationBatchDeleteMessage" xml:space="preserve">
+    <value>¿Está seguro que desea eliminar este lote de migración?</value>
+  </data>
+  <data name="MigrationBatchDeletionFailure" xml:space="preserve">
+    <value>No se pudo eliminar el lote de migración...</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>Ver</value>
+  </data>
+  <data name="MigrationDeletionConfirmation" xml:space="preserve">
+    <value>El proceso de migración se ha eliminado con éxito.</value>
+  </data>
+  <data name="UserPrincipalName" xml:space="preserve">
+    <value>Nombre Principal de usuario</value>
+  </data>
+  <data name="EnvironmentEndpointInfoCaption" xml:space="preserve">
+    <value>Dirección de punto final para el entorno de Exchange. La dirección debe buscar como https://webmail.fabrikam.com/PowerShell</value>
+  </data>
+  <data name="EnvironmentNameInfoCaption" xml:space="preserve">
+    <value>El nombre amigable para el medio ambiente. Este valor solamente es utilizado por este portal.</value>
+  </data>
+  <data name="EnvironmentUsernameInfoCaption" xml:space="preserve">
+    <value>Este es el nombre de usuario administrativo, formato admin@fabrikam.com, para la instancia de host de intercambio.</value>
+  </data>
+  <data name="PortalSetupPromptMessage" xml:space="preserve">
+    <value>Configuración del portal</value>
+  </data>
+  <data name="TargetDeliverDomain" xml:space="preserve">
+    <value>Dominio de entrega destino</value>
+  </data>
+</root>

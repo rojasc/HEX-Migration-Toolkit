@@ -1,0 +1,30 @@
+﻿#EnvironmentAddNewContainer {
+    margin: 15px;
+}
+
+    #EnvironmentAddNewContainer .product-title {
+        font-size: 40px;
+        font-weight: 100;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+
+    #EnvironmentAddNewContainer .feature-title {
+        font-size: 20px;
+        font-weight: 100;
+        display: inline-block;
+    }
+
+    #EnvironmentAddNewContainer #AddSubscriptionsViewContainer {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    #EnvironmentAddNewContainer #Consent {
+        margin-left: 0px;
+    }
+
+    #EnvironmentAddNewContainer #SubmitButton {
+        margin-top: 20px;
+        display: inline-block;
+    }

@@ -1,0 +1,58 @@
+﻿<style>
+    #profileTable td {
+        padding-bottom: 10px;
+    }
+
+    .inputField {
+        margin-top: 5px;
+        width: 100%;
+        box-sizing: border-box;
+        height: 30px;
+    }
+
+    .note {
+        font-size: 10px;
+        vertical-align: bottom;
+    }
+
+    .leftColumn {
+        width: 50%;
+    }
+
+    .rightColumn {
+        padding-left: 50px;
+    }
+</style>
+<script id="newEnvironmentProfile-template" type="text/html">
+    <table id="profileTable" style="width: 50%; min-width: 600px;">
+        <tr>
+            <td colspan="2" class="section">
+                <label>@Resources.EnvironmentInfoSectionCaption</label>
+            </td>
+        </tr>
+        <tr>
+            <td class="leftColumn">
+                @Resources.EnvironmentEndpointCaption
+                <br />
+                <input id="Endpoint" name="Endpoint" type="text" class="inputField" data-bind="textinput: viewModel.Endpoint" data-rule-required="true" />
+                <label class="note">@Resources.EnvironmentEndpointInfoCaption</label>
+            </td>
+            <td class="rightColumn">
+                <label>@Resources.EnvironmentNameCaption</label><br />
+                <input id="Name" name="Name" type="text" class="inputField" data-bind="textinput: viewModel.Name" data-rule-required="true" />
+                <label class="note">@Resources.EnvironmentNameInfoCaption</label>
+            </td>
+        </tr>
+        <tr>
+            <td class="leftColumn">
+                @Resources.EnvironmentUsernameCaption
+                <input id="Username" name="Username" type="text" class="inputField" data-bind="textinput: viewModel.Username" data-rule-required="true" />
+                <label class="note">@Resources.EnvironmentUsernameInfoCaption</label>
+            </td>
+            <td class="rightColumn">
+                @Resources.EnvironmentPasswordCaption
+                <input id="Password" name="Password" type="password" class="inputField" data-bind="textinput: viewModel.Password" data-rule-required="true" />
+            </td>
+        </tr>
+    </table>
+</script>
