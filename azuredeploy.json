@@ -155,7 +155,8 @@
     "authRuleResourceId": "[resourceId('Microsoft.ServiceBus/namespaces/authorizationRules', parameters('serviceBusNamespaceName'), variables('defaultSASKeyName'))]",
     "keysPermissions": [],
     "secretsPermissions": [ "delete", "get", "set" ],
-    "storageAccountName": "[concat('storage', uniqueString(resourceGroup().id))]"
+    "storageAccountName": "[concat('storage', uniqueString(resourceGroup().id))]",
+    "webJobSiteName": "[concat(parameters('siteName'), '-webjob')]"
   },
   "resources": [
     {
@@ -327,14 +328,84 @@
           "properties": {
             "ApplicationId": "[parameters('applicationId')]",
             "ApplicationTenantId": "[parameters('applicationTenantId')]",
-            "ExchangeOnlineUsername": "[parameters('exchangeOnlineUsername')]",
             "InstrumentationKey": "[reference(concat('Microsoft.Insights/components/', parameters('siteName'))).InstrumentationKey]",
             "KeyVaultApplicationId": "[parameters('keyVaultApplicationId')]",
             "KeyVaultApplicationSecret": "[parameters('keyVaultApplicationSecret')]",
             "KeyVaultApplicationTenantId": "[parameters('keyVaultTenantId')]",
             "KeyVaultBaseAddress": "[concat('https://', parameters('keyVaultName'), '.vault.azure.net')]",
             "PartnerCenterApplicationId": "[parameters('partnerCenterApplicationId')]",
-            "PartnerCenterApplicationTenantId": "[parameters('partnerCenterApplicationTenantId')]"
+            "PartnerCenterApplicationTenantId": "[parameters('partnerCenterApplicationTenantId')]",
+            "project": "src\\Portal\\Portal.csproj"
+          }
+        }
+      ]
+    },
+    {
+      "apiVersion": "2015-08-01",
+      "type": "Microsoft.Web/sites",
+      "name": "[variables('webJobSiteName')]",
+      "location": "[resourceGroup().location]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Web/serverFarms/', parameters('hostingPlanName'))]",
+        "[resourceId('Microsoft.Storage/storageAccounts/', variables('storageAccountName'))]"
+      ],
+      "properties": {
+        "name": "[variables('webJobSiteName')]",
+        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('hostingPlanName'))]",
+        "siteConfig": {
+          "AlwaysOn": true
+        }
+      },
+      "resources": [
+        {
+          "apiVersion": "2015-08-01",
+          "type": "config",
+          "name": "connectionstrings",
+          "dependsOn": [
+            "[concat('Microsoft.Insights/components/', parameters('siteName'))]",
+            "[resourceId('Microsoft.Web/sites/', variables('webJobSiteName'))]",
+            "[resourceId('Microsoft.Storage/storageAccounts/', variables('storageAccountName'))]"
+          ],
+          "properties": {
+            "AzureWebJobsDashboard": {
+              "value": "[concat('DefaultEndpointsProtocol=https;AccountName=', variables('storageAccountName'), ';AccountKey=', listKeys(resourceId('Microsoft.Storage/storageAccounts/', variables('storageAccountName')), '2015-05-01-preview').key1)]",
+              "type": "Custom"
+            },
+            "AzureWebJobsStorage": {
+              "value": "[concat('DefaultEndpointsProtocol=https;AccountName=', variables('storageAccountName'), ';AccountKey=', listKeys(resourceId('Microsoft.Storage/storageAccounts/', variables('storageAccountName')), '2015-05-01-preview').key1)]",
+              "type": "Custom"
+            }
+          }
+        },
+        {
+          "apiVersion": "2015-08-01",
+          "type": "config",
+          "name": "appsettings",
+          "dependsOn": [
+            "[resourceId('Microsoft.Web/sites/', variables('webJobSiteName'))]"
+          ],
+          "properties": {
+            "ExchangeOnlineUsername": "[parameters('exchangeOnlineUsername')]",
+            "InstrumentationKey": "[reference(concat('Microsoft.Insights/components/', parameters('siteName'))).InstrumentationKey]",
+            "KeyVaultApplicationId": "[parameters('keyVaultApplicationId')]",
+            "KeyVaultApplicationSecret": "[parameters('keyVaultApplicationSecret')]",
+            "KeyVaultApplicationTenantId": "[parameters('keyVaultTenantId')]",
+            "KeyVaultBaseAddress": "[concat('https://', parameters('keyVaultName'), '.vault.azure.net')]",
+            "project": "src\\WebJob\\WebJob.csproj"
+          }
+        },
+        {
+          "apiVersion": "2015-08-01",
+          "name": "web",
+          "type": "sourcecontrols",
+          "dependsOn": [
+            "[resourceId('Microsoft.Web/sites/', variables('webJobSiteName'))]",
+            "[resourceId('Microsoft.Web/Sites/config', variables('webJobSiteName'), 'appsettings')]"
+          ],
+          "properties": {
+            "RepoUrl": "[parameters('repoUrl')]",
+            "branch": "[parameters('branch')]",
+            "IsManualIntegration": "parameters('manualIntegration')]"
           }
         }
       ]
